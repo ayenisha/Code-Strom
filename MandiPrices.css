@@ -1,0 +1,139 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.search-card {
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: white;
+}
+
+.search-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-wrapper {
+    display: flex;
+    flex-grow: 1;
+}
+
+input, select, button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input, select {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#voiceSearchBtn {
+    background-color: #e74c3c;
+    margin-left: 5px;
+}
+
+#voiceSearchBtn:hover {
+    background-color: #c0392b;
+}
+
+.language-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.language-toggle button {
+    background-color: #ecf0f1;
+    color: #34495e;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-toggle button.active {
+    background-color: #3498db;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .search-filter {
+        flex-direction: column;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

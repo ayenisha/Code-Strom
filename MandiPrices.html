@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Mandi Price Tracker</title>
+    <link rel="stylesheet" href="MandiPrices.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 id="mainTitle">Indian Mandi Price Tracker</h1>
+        
+        <div class="language-toggle">
+            <button id="englishBtn" class="active">English</button>
+            <button id="hindiBtn">हिंदी</button>
+        </div>
+
+        <div class="card search-card">
+            <h2 id="searchTitle">Search and Filter</h2>
+            <div class="search-filter">
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search by crop or mandi">
+                    <button id="voiceSearchBtn"><i class="fas fa-microphone"></i></button>
+                </div>
+                <select id="cropSelect">
+                    <option value="">Select crop</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Wheat">Wheat</option>
+                    <option value="Corn">Corn</option>
+                    <option value="Soybean">Soybean</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Sugarcane">Sugarcane</option>
+                </select>
+                <button id="refreshButton">Refresh Data</button>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2 id="priceListTitle">Price List</h2>
+                <div class="table-container">
+                    <table id="priceTable">
+                        <thead>
+                            <tr>
+                                <th>Crop</th>
+                                <th>Mandi</th>
+                                <th>Price (₹/quintal)</th>
+                                <th>Last Updated</th>
+                            </tr>
+                        </thead>
+                        <tbody id="priceTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 id="chartTitle">Price Trend</h2>
+                <canvas id="priceChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="MandiPrices.js"></script>
+</body>
+</html>
